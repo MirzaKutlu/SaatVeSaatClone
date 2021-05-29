@@ -1,4 +1,4 @@
-package com.h5190067.saatsaatcloneapp
+package com.h5190067.saatsaatcloneapp.util
 
 object Constants {
     const val COUNT_DOWN_MILISECOND = 3000.toLong()

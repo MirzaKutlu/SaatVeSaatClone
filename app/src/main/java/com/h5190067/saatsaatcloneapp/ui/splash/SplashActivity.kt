@@ -1,9 +1,12 @@
-package com.h5190067.saatsaatcloneapp
+package com.h5190067.saatsaatcloneapp.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import com.h5190067.saatsaatcloneapp.R
+import com.h5190067.saatsaatcloneapp.ui.login.LoginPageActivity
+import com.h5190067.saatsaatcloneapp.util.Constants
 
 class SplashActivity : AppCompatActivity() {
 
@@ -16,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun doSplash() {
-        countDownTimer = object: CountDownTimer(Constants.COUNT_DOWN_MILISECOND,Constants.COUNT_DOWN_INTERVAL){
+        countDownTimer = object: CountDownTimer(Constants.COUNT_DOWN_MILISECOND, Constants.COUNT_DOWN_INTERVAL){
             override fun onTick(millisUntilFinished: Long) {
 
             }
