@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Saat&amp;SaatCloneApp</string>
+    <string name="ExitApp">Çıkış</string>
+    <string name="GoSettings">Ayarlara Git</string>
+    <string name="ExitNo">Hayır</string>
+    <string name="ExitYes">Evet</string>
+    <string name="AlertTitle">İnternet Yok !</string>
+    <string name="AlertMessage">İnternet Bağlantınızı Kontrol Edip Tekrar Deneyin</string>
+    <string name="txtErrorEmail">E-Posta Adresinizi Kontrol Ediniz</string>
+    <string name="txtErrorPassword">Şifrenizi Kontrol Ediniz</string>
+
+
+
+
 </resources>

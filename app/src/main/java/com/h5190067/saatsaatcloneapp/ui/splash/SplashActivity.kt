@@ -1,12 +1,14 @@
 package com.h5190067.saatsaatcloneapp.ui.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import androidx.appcompat.app.AppCompatActivity
 import com.h5190067.saatsaatcloneapp.R
 import com.h5190067.saatsaatcloneapp.ui.login.LoginPageActivity
+import com.h5190067.saatsaatcloneapp.util.AlertUtil
 import com.h5190067.saatsaatcloneapp.util.Constants
+import com.h5190067.saatsaatcloneapp.util.NetworkUtil
 
 class SplashActivity : AppCompatActivity() {
 
@@ -28,9 +30,17 @@ class SplashActivity : AppCompatActivity() {
             }
         }.start()
     }
-    private fun changeActivity(){
-        intent = Intent(this@SplashActivity, LoginPageActivity::class.java)
-        startActivity(intent)
-        finish()
+    private fun changeActivity() {
+        if (NetworkUtil.checkNetworkConnection(applicationContext)) {
+            startActivity(Intent(this@SplashActivity, LoginPageActivity::class.java))
+            finish()
+        }else{
+                AlertUtil.giveAlert(
+                    this,
+                    getString(R.string.AlertTitle),
+                    getString(R.string.AlertMessage),
+                    true
+                )
+        }
     }
 }
