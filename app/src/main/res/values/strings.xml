@@ -8,8 +8,8 @@
     <string name="AlertMessage">İnternet Bağlantınızı Kontrol Edip Tekrar Deneyin</string>
     <string name="txtErrorEmail">E-Posta Adresinizi Kontrol Ediniz</string>
     <string name="txtErrorPassword">Şifrenizi Kontrol Ediniz</string>
-
-
+    <string name="go_back_alert">Çıkmak İstediğinize Emin Misiniz ?</string>
+    <string name="go_back_alert_message">Uygukamadan Çıkmak Üzeresiniz</string>
 
 
 </resources>
