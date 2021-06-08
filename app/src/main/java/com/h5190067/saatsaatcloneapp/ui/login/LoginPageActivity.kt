@@ -1,8 +1,8 @@
 package com.h5190067.saatsaatcloneapp.ui.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.h5190067.saatsaatcloneapp.R
 import com.h5190067.saatsaatcloneapp.databinding.ActivityLoginPageBinding
 import com.h5190067.saatsaatcloneapp.ui.categories.CategoriesPageActivity

@@ -1,6 +1,5 @@
 package com.h5190067.saatsaatcloneapp.util
 
-import android.text.TextUtils
 import android.util.Patterns
 
 object ValidUtil {
