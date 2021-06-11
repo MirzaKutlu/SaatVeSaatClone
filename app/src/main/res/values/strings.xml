@@ -10,6 +10,6 @@
     <string name="txtErrorPassword">Şifrenizi Kontrol Ediniz</string>
     <string name="go_back_alert">Çıkmak İstediğinize Emin Misiniz ?</string>
     <string name="go_back_alert_message">Uygukamadan Çıkmak Üzeresiniz</string>
-
+    <string name="progDialog">Yükleniyor Lütfen Bekleyiniz</string>
 
 </resources>

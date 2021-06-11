@@ -1,6 +1,7 @@
 package com.h5190067.saatsaatcloneapp.ui.categories
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.SearchView
@@ -11,9 +12,8 @@ import com.h5190067.saatsaatcloneapp.R
 import com.h5190067.saatsaatcloneapp.data.model.CategoriesAndProductsResponse
 import com.h5190067.saatsaatcloneapp.data.model.CategoriesAndProductsResponseItem
 import com.h5190067.saatsaatcloneapp.databinding.ActivityCategoriesPageBinding
-import com.h5190067.saatsaatcloneapp.util.AlertUtil
-import com.h5190067.saatsaatcloneapp.util.Constants
-import com.h5190067.saatsaatcloneapp.util.OnItemClickListener
+import com.h5190067.saatsaatcloneapp.ui.product.ProductsPageActivity
+import com.h5190067.saatsaatcloneapp.util.*
 import java.util.*
 
 class CategoriesPageActivity : AppCompatActivity() {
@@ -63,6 +63,8 @@ class CategoriesPageActivity : AppCompatActivity() {
             }
         }
 
+        ProggresDialogUtil.showDialog(this, getString(R.string.progDialog))
+
         initViewModel()
     }
 
@@ -84,6 +86,11 @@ class CategoriesPageActivity : AppCompatActivity() {
                         categories.get(position).KategoriAdi,
                         Toast.LENGTH_SHORT
                     ).show()
+
+                    val selectCategoryString = ObjectUtil.objectToJsonString(categories.get(position))
+                    val intent = Intent(this@CategoriesPageActivity, ProductsPageActivity::class.java)
+                    intent.putExtra(Constants.MOVED_TITLE, selectCategoryString)
+                    startActivity(intent)
                 }
             })
 
@@ -96,17 +103,22 @@ class CategoriesPageActivity : AppCompatActivity() {
     private fun initViewModel() {
         viewModel.apply {
             allCategoriesLiveData.observe(this@CategoriesPageActivity, androidx.lifecycle.Observer {
-                Log.e("Mizaq", "observe: " + it.toString())
+                Log.e("Veri", "observe: " + it.toString())
                 categoryArray = it
                 initRecycleView(categoryArray)
+                ProggresDialogUtil.dontShowDialog()
+
             })
 
             error?.observe(this@CategoriesPageActivity, androidx.lifecycle.Observer {
-                Log.e("mirza", "error:")
+                Log.e("Veri", "error:")
+                ProggresDialogUtil.dontShowDialog()
+
             })
 
             loading?.observe(this@CategoriesPageActivity, androidx.lifecycle.Observer {
-                Log.e("mirza", "loading:")
+                Log.e("Veri", "loading:")
+                ProggresDialogUtil.dontShowDialog()
 
             })
         }

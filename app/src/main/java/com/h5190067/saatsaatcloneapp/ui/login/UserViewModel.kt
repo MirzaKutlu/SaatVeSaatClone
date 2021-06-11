@@ -1,4 +1,4 @@
- package com.h5190067.saatsaatcloneapp.ui.categories
+package com.h5190067.saatsaatcloneapp.ui.login
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -6,37 +6,35 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.h5190067.saatsaatcloneapp.data.model.CategoriesAndProductsResponse
-import com.h5190067.saatsaatcloneapp.data.repository.CategoryRepository
+import com.h5190067.saatsaatcloneapp.data.model.UserResponse
+import com.h5190067.saatsaatcloneapp.data.repository.UserRepository
 import com.h5190067.saatsaatcloneapp.util.ResourceStatus
 import kotlinx.coroutines.launch
 
-class CategoriesViewModel: ViewModel(){
-
-    private  val categoryRepository: CategoryRepository = CategoryRepository()
+class UserViewModel : ViewModel() {
+    private val userRepository = UserRepository()
 
     init {
-        getCategories()
+        getUsers()
     }
 
-    var loading   : MutableLiveData<Boolean>? = MutableLiveData()
-    var allCategoriesLiveData = MutableLiveData<CategoriesAndProductsResponse>()
-    var error =    MutableLiveData<Throwable>()
+    var loading: MutableLiveData<Boolean>? = MutableLiveData()
+    var allUsersLiveData = MutableLiveData<UserResponse>()
+    var error = MutableLiveData<Throwable>()
 
-
-    fun getCategories()  = viewModelScope.launch {
-
-        categoryRepository.getCategories()
+    private fun getUsers() = viewModelScope.launch {
+        userRepository.getUsers()
 
             .asLiveData(viewModelScope.coroutineContext).observeForever {
 
-                when(it.status) {
+                when (it.status) {
                     ResourceStatus.LOADING -> {
                         loading?.postValue(true)
                     }
 
                     ResourceStatus.SUCCESS -> {
-                        Log.e("Veri",it.data.toString())
-                        allCategoriesLiveData.postValue(it.data!!)
+                        Log.e("Veri", it.data.toString())
+                        allUsersLiveData.postValue(it.data!!)
                         loading?.postValue(false)
                     }
 

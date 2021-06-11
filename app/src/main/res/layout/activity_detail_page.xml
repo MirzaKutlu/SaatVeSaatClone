@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailPageActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/txtProductNameDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imgProductDetail"
+                    app:layout_constraintHorizontal_bias="0.089"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgProductDetail" />
+
+                <ImageView
+                    android:id="@+id/imgProductDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/detail_page_top"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.491"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/txtProductExplain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/detail_page_start"
+                    android:layout_marginTop="@dimen/detail_page_top"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductPrice" />
+
+                <TextView
+                    android:id="@+id/txtProductCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtProductMaterial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/detail_page_start"
+                    android:layout_marginTop="@dimen/detail_page_top"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductNameDetail" />
+
+                <TextView
+                    android:id="@+id/txtProductCertificate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/detail_page_start"
+                    android:layout_marginTop="@dimen/detail_page_top"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductMaterial" />
+
+                <TextView
+                    android:id="@+id/txtProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/detail_page_start"
+                    android:layout_marginTop="@dimen/detail_page_top"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductColor" />
+
+                <TextView
+                    android:id="@+id/txtProductType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/detail_page_start"
+                    android:layout_marginTop="@dimen/detail_page_top"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductCertificate" />
+
+                <TextView
+                    android:id="@+id/txtProductSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/detail_page_start"
+                    android:layout_marginTop="@dimen/detail_page_top"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductType" />
+
+                <TextView
+                    android:id="@+id/txtProductColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/detail_page_start"
+                    android:layout_marginTop="@dimen/detail_page_top"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductSize" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

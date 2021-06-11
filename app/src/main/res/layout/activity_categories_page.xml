@@ -12,12 +12,15 @@
         android:layout_height="141dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/saatlogo" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvClocks"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,10 +29,23 @@
 
     <SearchView
         android:id="@+id/searchViewCategory"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_width="303dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Saat Kategorileri"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/searchViewCategory"
+        app:layout_constraintEnd_toEndOf="@+id/searchViewCategory"
+        app:layout_constraintStart_toStartOf="@+id/searchViewCategory" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

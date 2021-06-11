@@ -5,4 +5,5 @@ object Constants {
     const val COUNT_DOWN_INTERVAL = 1000.toLong()
     const val BASE_URL = "https://raw.githubusercontent.com/MirzaKutlu/saatvesaatapiJson/main/"
     const val GRID_SPAN_COUNT = 2
+    const val MOVED_TITLE = "MOVED_TITLE"
 }

@@ -28,9 +28,10 @@ class CategoriesAdapter(
             binding.apply {
                 txtCategoryName.text = categories[position].KategoriAdi
                 var imageUrl = categories.get(position).kapakResim as String
-                GildeUtil.glideImage(imgCategoryCard.context, imageUrl, imgCategoryCard)
+                GildeUtil.glideImage(imgCategory.context, imageUrl, imgCategory)
                 CardViewCategory.setOnClickListener{
                     onItemClickListener.onItemClick(position)
+
                 }
             }
         }
