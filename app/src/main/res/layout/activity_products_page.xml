@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.categories.CategoriesPageActivity">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="141dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/saatlogo" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvClocksProducts"
         android:layout_width="match_parent"
@@ -22,28 +13,34 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSortProducts"
+        app:layout_constraintTop_toBottomOf="@+id/btnSortCategories"
         tools:listitem="@layout/card_view_categories" />
 
     <TextView
         android:id="@+id/txtCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Saat Kategorileri"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSortCategories"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <Button
-        android:id="@+id/btnSortProducts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/detail_page_start"
+    <ImageButton
+        android:id="@+id/btnToggleGrid"
+        android:layout_width="@dimen/login_page"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_grid"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/rcvClocksProducts"
-        app:layout_constraintTop_toBottomOf="@+id/txtCategory" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnToggleList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnToggleList"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/btnToggleList"
@@ -52,20 +49,32 @@
         android:scaleType="centerInside"
         android:src="@drawable/ic_list"
         android:text="Button"
-        app:layout_constraintBottom_toBottomOf="@+id/btnSortProducts"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSortCategories"
         app:layout_constraintEnd_toStartOf="@+id/btnToggleGrid"
-        app:layout_constraintTop_toTopOf="@+id/btnSortProducts" />
+        app:layout_constraintTop_toTopOf="@+id/btnSortCategories"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banner" />
 
     <ImageButton
-        android:id="@+id/btnToggleGrid"
+        android:id="@+id/btnSortCategories"
         android:layout_width="@dimen/login_page"
-        android:layout_height="0dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/ic_grid"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="@+id/btnToggleList"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnToggleList" />
+        android:layout_height="50dp"
+        android:background="@drawable/ic_gradient_color"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCategory"
+        app:layout_constraintEnd_toStartOf="@+id/btnToggleList"
+        app:layout_constraintTop_toTopOf="@+id/txtCategory"
+        app:layout_constraintVertical_bias="0.489"
+        app:srcCompat="@drawable/arrow" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

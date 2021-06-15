@@ -33,7 +33,7 @@ class CategoriesPageActivity : AppCompatActivity() {
     override fun onBackPressed() {
         AlertUtil.giveAlert(
             this, getString(R.string.go_back_alert), getString(R.string.go_back_alert_message),
-            false
+            Alerts.EXIT_ALERT
         )
     }
 

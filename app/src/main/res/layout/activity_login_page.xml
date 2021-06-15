@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:hapticFeedbackEnabled="true"
     tools:context=".ui.login.LoginPageActivity">
 
     <ImageView
@@ -104,6 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/detail_page"
         android:background="@color/btn_login"
+        android:enabled="false"
         android:text="Üye Girişi"
         android:textAllCaps="false"
         android:textColor="@color/white"

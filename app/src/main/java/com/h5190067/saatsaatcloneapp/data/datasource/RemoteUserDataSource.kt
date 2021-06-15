@@ -10,7 +10,7 @@ class RemoteUserDataSource: UserDataSource {
         try {
             emit(Resource.Loading())
 
-            val response = UserService.build().getUsers()
+            val response = CategoryAndUserService.build().getUsers()
 
             if (response.isSuccessful) {
 

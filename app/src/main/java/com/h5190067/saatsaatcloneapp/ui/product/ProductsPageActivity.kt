@@ -17,11 +17,15 @@ import com.h5190067.saatsaatcloneapp.util.*
 
 class ProductsPageActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProductsPageBinding
-    var selectCategory: CategoriesAndProductsResponseItem? = null
-    var productAdapter: ProductAdapter? = null
-    var layoutType: LayoutTypes? = LayoutTypes.GRID_LAYOUT
-    var linearLayoutManager: LinearLayoutManager? = null
-    var gridLayoutManager: GridLayoutManager? = null
+
+    companion object{
+        var selectCategory: CategoriesAndProductsResponseItem? = null
+        var productAdapter: ProductAdapter? = null
+        var layoutType: LayoutTypes? = LayoutTypes.GRID_LAYOUT
+        var linearLayoutManager: LinearLayoutManager? = null
+        var gridLayoutManager: GridLayoutManager? = null
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,8 +47,16 @@ class ProductsPageActivity : AppCompatActivity() {
             btnToggleGrid.setOnClickListener {
                 initLayoutManager()
             }
+            btnToggleGrid.isEnabled = false
+            btnToggleGrid.setBackgroundColor(resources.getColor(R.color.selected))
+
             btnToggleList.setOnClickListener {
                 initLayoutManager()
+            }
+            btnToggleList.background = getDrawable(R.drawable.ic_gradient_color)
+
+            btnSortCategories.setOnClickListener {
+                AlertUtil.giveAlert(this@ProductsPageActivity, "Sırala", "Saat isimlerine göre sralama", Alerts.CATEGORY_SORT_ALERT)
             }
         }
 
@@ -59,14 +71,18 @@ class ProductsPageActivity : AppCompatActivity() {
         binding.apply {
             if (layoutType == LayoutTypes.GRID_LAYOUT){
                 btnToggleList.isEnabled = false
+                btnToggleList.setBackgroundColor(resources.getColor(R.color.selected))
                 rcvClocksProducts.layoutManager = linearLayoutManager
                 layoutType = LayoutTypes.LIST_LAYOUT
                 btnToggleGrid.isEnabled = true
+                btnToggleGrid.background = getDrawable(R.drawable.ic_gradient_color)
             } else {
                 btnToggleList.isEnabled = true
+                btnToggleList.background = getDrawable(R.drawable.ic_gradient_color)
                 rcvClocksProducts.layoutManager = gridLayoutManager
                 layoutType = LayoutTypes.GRID_LAYOUT
                 btnToggleGrid.isEnabled = false
+                btnToggleGrid.setBackgroundColor(resources.getColor(R.color.selected))
             }
         }
     }

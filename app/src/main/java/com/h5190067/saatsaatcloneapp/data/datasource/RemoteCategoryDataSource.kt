@@ -10,7 +10,7 @@ class RemoteCategoryDataSource : CategoryDataSource {
         try {
             emit(Resource.Loading())
 
-            val response = CategoryService.build().getCategories()
+            val response = CategoryAndUserService.build().getCategories()
 
             if (response.isSuccessful) {
 

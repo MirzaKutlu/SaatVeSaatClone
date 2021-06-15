@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.h5190067.saatsaatcloneapp.R
 import com.h5190067.saatsaatcloneapp.ui.login.LoginPageActivity
 import com.h5190067.saatsaatcloneapp.util.AlertUtil
+import com.h5190067.saatsaatcloneapp.util.Alerts
 import com.h5190067.saatsaatcloneapp.util.Constants
 import com.h5190067.saatsaatcloneapp.util.NetworkUtil
 
@@ -39,7 +40,7 @@ class SplashActivity : AppCompatActivity() {
                     this,
                     getString(R.string.AlertTitle),
                     getString(R.string.AlertMessage),
-                    true
+                    Alerts.NO_CONN_ALERT
                 )
         }
     }
