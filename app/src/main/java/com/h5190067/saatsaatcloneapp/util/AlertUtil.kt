@@ -6,8 +6,10 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.provider.Settings
 import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
 import com.h5190067.saatsaatcloneapp.R
 import com.h5190067.saatsaatcloneapp.data.model.Product
+import com.h5190067.saatsaatcloneapp.ui.product.ProductAdapter
 import com.h5190067.saatsaatcloneapp.ui.product.ProductsPageActivity.Companion.productAdapter
 import com.h5190067.saatsaatcloneapp.ui.product.ProductsPageActivity.Companion.selectCategory
 
@@ -15,7 +17,7 @@ import com.h5190067.saatsaatcloneapp.ui.product.ProductsPageActivity.Companion.s
 object AlertUtil {
 
     private var list: ArrayList<Product>? = null
-    private val adapter = productAdapter!!
+    private var adapter: ProductAdapter? = null
 
     fun giveAlert(activity: Activity, title: String, message: String, alertShape: Alerts ){
         val builder = AlertDialog.Builder(activity)
@@ -45,20 +47,24 @@ object AlertUtil {
                 })
         } else if (alertShape == Alerts.CATEGORY_SORT_ALERT){
 
+            adapter = productAdapter!!
+
             list = selectCategory!!.Products as ArrayList<Product>
 
             val options = arrayOf("Artan Sıralama", "Azalan Sıralama")
 
-            list?.run {
-                builder.setItems(options) { dialog, pozisyon ->
-                    when (pozisyon) {
-                        0 -> {
-                            this.sortBy { it.MarkaAdi }
-                            adapter.notifyDataSetChanged()
-                        }
-                        1 -> {
-                            this.sortByDescending { it.MarkaAdi }
-                            adapter.notifyDataSetChanged()
+            adapter?.let {
+                list?.run {
+                    builder.setItems(options) { dialog, pozisyon ->
+                        when (pozisyon) {
+                            0 -> {
+                                this.sortBy { it.MarkaAdi }
+                                it.notifyDataSetChanged()
+                            }
+                            1 -> {
+                                this.sortByDescending { it.MarkaAdi }
+                                it.notifyDataSetChanged()
+                            }
                         }
                     }
                 }

@@ -25,7 +25,7 @@
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
-                    android:layout_height="126dp"
+                    android:layout_height="@dimen/banner_width"
                     android:scaleType="fitXY"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto"
                     android:text="TextView"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/text_size_global"
                     app:layout_constraintBottom_toBottomOf="@+id/txtMainPage"
                     app:layout_constraintStart_toEndOf="@+id/txtMainPage"
                     app:layout_constraintTop_toTopOf="@+id/txtMainPage" />
@@ -48,7 +48,7 @@
                     android:id="@+id/imgProductDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="@dimen/login_logo_height"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
@@ -59,11 +59,11 @@
                     android:id="@+id/txtProductNameDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="@dimen/detail_page_top"
                     android:fontFamily="@font/roboto_medium"
                     android:text="TextView"
                     android:textColor="@color/black"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/text_size_global_second"
                     app:layout_constraintEnd_toEndOf="@+id/imgProductDetail"
                     app:layout_constraintHorizontal_bias="0.517"
                     app:layout_constraintStart_toStartOf="@+id/imgProductDetail"
@@ -73,79 +73,28 @@
                     android:id="@+id/txtProductExplain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="@dimen/login_page"
                     android:fontFamily="@font/roboto"
+                    android:padding="@dimen/detail_page_top"
                     android:text="TextView"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/login_error_size"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtProductPrice" />
 
                 <TextView
-                    android:id="@+id/txtProductMaterial"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="36dp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="TextView"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/txtProductCertificate"
-                    app:layout_constraintEnd_toStartOf="@+id/txtProductCategory"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/txtProductCertificate"
-                    app:layout_constraintVertical_bias="1.0" />
-
-                <TextView
-                    android:id="@+id/txtProductCertificate"
-                    android:layout_width="86dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="TextView"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="@+id/txtProductNameDetail"
-                    app:layout_constraintStart_toEndOf="@+id/textView6"
-                    app:layout_constraintTop_toBottomOf="@+id/txtProductNameDetail" />
-
-                <TextView
                     android:id="@+id/txtProductPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="68dp"
+                    android:layout_marginTop="@dimen/login_page"
                     android:fontFamily="@font/roboto_bold"
                     android:text="TextView"
                     android:textColor="@color/btn_login"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/text_size_global"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.481"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtProductSize" />
-
-                <TextView
-                    android:id="@+id/txtProductType"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="TextView"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/txtProductCertificate"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/textView7"
-                    app:layout_constraintTop_toTopOf="@+id/txtProductCertificate"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <TextView
-                    android:id="@+id/txtProductSize"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="TextView"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView6"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/txtProductMaterial"
-                    app:layout_constraintTop_toBottomOf="@+id/txtProductMaterial" />
 
                 <TextView
                     android:id="@+id/txtProductColor"
@@ -154,23 +103,78 @@
                     android:layout_marginStart="12dp"
                     android:fontFamily="@font/roboto_medium"
                     android:text="TextView"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/text_size_global"
                     app:layout_constraintBottom_toBottomOf="@+id/txtProductSize"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.018"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/textView8"
                     app:layout_constraintTop_toTopOf="@+id/txtProductSize"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/txtProductMaterial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/detail_page"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="@dimen/text_size_global"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtProductCertificate"
+                    app:layout_constraintEnd_toStartOf="@+id/txtProductCategory"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txtProductCertificate"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/txtProductSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="@dimen/text_size_global"
+                    app:layout_constraintEnd_toEndOf="@+id/textView6"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/txtProductMaterial"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductMaterial" />
+
+                <TextView
+                    android:id="@+id/txtProductCertificate"
+                    android:layout_width="86dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="@dimen/text_size_global"
+                    app:layout_constraintEnd_toEndOf="@+id/txtProductNameDetail"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView6"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductNameDetail" />
+
+                <TextView
+                    android:id="@+id/txtProductType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TextView"
+                    android:textSize="@dimen/text_size_global"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtProductCertificate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView7"
+                    app:layout_constraintTop_toTopOf="@+id/txtProductCertificate"
                     app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:id="@+id/txtMainPage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="36dp"
-                    android:layout_marginTop="140dp"
+                    android:layout_marginStart="@dimen/detail_page"
+                    android:layout_marginTop="@dimen/categories_width"
                     android:fontFamily="@font/roboto"
                     android:text="Anasayfa /"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/text_size_global"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
