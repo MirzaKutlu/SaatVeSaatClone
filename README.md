@@ -1,5 +1,3 @@
-# SaatVeSaatClone
-Saat&amp;Saat kategorileri, ürünleri ve ürün detayları hakkında bilgi veren Android uygulaması
 ![cover](https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Assets/saatvesaat.png)
 
 
