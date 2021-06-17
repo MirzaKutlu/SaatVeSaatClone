@@ -28,6 +28,7 @@ class SplashActivity : AppCompatActivity() {
             }
             override fun onFinish() {
                 changeActivity()
+
             }
         }.start()
     }
