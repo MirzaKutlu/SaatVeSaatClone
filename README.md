@@ -7,7 +7,7 @@
 
 SaatveSaat markasının ürünlerini içeren klon bir Android Uygulamasıdır.
 
-Bu proje , Retrofit, Glide vb. teknolojiler kullanarak oluşturulmuştur.
+Bu proje , Retrofit, Glide, Coroutines vb. teknolojiler kullanarak oluşturulmuştur.
 
 # Çıktılar
 <p>
