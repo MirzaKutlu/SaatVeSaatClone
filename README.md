@@ -22,7 +22,7 @@ Bu proje , Retrofit, Glide vb. teknolojiler kullanarak oluşturulmuştur.
 <img height="350" src="https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Screens/9.png">
 
 </p>
-### Ekran Videosu
+# Ekran Videosu
 <p>
   <img height="450" src="https://github.com/MirzaKutlu/SaatVeSaatClone/blob/master/Screens/AndroidGifSaatSaat.gif?raw=true">
 </p>
