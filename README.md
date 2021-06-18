@@ -11,19 +11,6 @@ Bu proje , Retrofit, Glide vb. teknolojiler kullanarak oluşturulmuştur.
 
 # Çıktılar
 <p>
-<img height="350" src="https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Screens/1.png">
-<img height="350" src="https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Screens/2.png">
-<img height="350" src="https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Screens/3.png">
-<img height="350" src="https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Screens/4.png">  
-<img height="350" src="https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Screens/5.png">
-<img height="350" src="https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Screens/6.png">
-<img height="350" src="https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Screens/7.png">
-<img height="350" src="https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Screens/8.png">
-<img height="350" src="https://raw.githubusercontent.com/MirzaKutlu/SaatVeSaatClone/master/Screens/9.png">
-
-</p>
-# Ekran Videosu
-<p>
   <img height="450" src="https://github.com/MirzaKutlu/SaatVeSaatClone/blob/master/Screens/AndroidGifSaatSaat.gif?raw=true">
 </p>
 
